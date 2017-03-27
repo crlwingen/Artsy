@@ -1,0 +1,33 @@
+ACCOUNTS table
+> AccountID int pk
+> Username varchar
+> Password varchar
+> UserIcon varchar 
+
+ARTWORKS table
+> ArtworkID int pk
+> DatePosted date
+> EndDate date
+> Caption varchar
+> ImageAddress varchar
+> IsForSale bool
+> StartBid int
+> CurrentBid int
+> Category varchar
+
+FOLLOWS table
+> AccountID fk (follower)
+> AccountID fk (following)
+
+LIKES table
+> LikeID int pk
+> ArtworkID fk
+
+COMMENTS table
+> CommentID int pk
+> ArtworkID fk
+> Content varchar
+> DateCommented date
+
+
+
